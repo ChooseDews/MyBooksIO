@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<!-- define angular app -->
+<html ng-app="scotchApp">
+
+<head>
+  <!-- SCROLLS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- SPELLS -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.min.js" charset="utf-8"></script>
+  <script src="/js/script.js"></script>
+</head>
+
+<!-- define angular controller -->
+
+<body ng-controller="mainController">
+
+  <nav class="blue">
+    <div class="nav-wrapper container">
+      <a href="/" class="brand-logo">MyBooks.io</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/">Add Book</a></li>
+        <li><a href="/all">View Books</a></li>
+        <li><a ng-click="credit()">Credits</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div id="main">
+
+    <!-- angular templating -->
+    <!-- this is where content will be injected -->
+    <div ng-view></div>
+
+  </div>
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+
+</body>
+
+</html>

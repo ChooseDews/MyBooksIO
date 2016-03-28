@@ -1,0 +1,103 @@
+
+
+<br><br>
+
+<style>
+
+
+  #book{
+    border-bottom-color: white !important;
+  }
+
+  h3{
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .card-modify{
+    max-height: inherit !important;
+  }
+
+</style>
+
+<div class="container">
+
+
+  <div class="row">
+         <div class="col s12 m6 offset-m3">
+           <div class="card blue lighten-1">
+             <div class="card-content white-text">
+
+
+          <h3 class="white-text center">Book Entry</h3>
+
+<form onsubmit="return false;" ng-submit="newBook(book)" autocomplete="off">
+               <div class="input-field text-white">
+       <input id="book" type="text" class="validate white-text" autocomplete="off" ng-model="book" autofocus min="13">
+       <label class="white-text" for="book">ISBN</label>
+     </div>
+
+     </form>
+
+
+             </div>
+           </div>
+         </div>
+       </div>
+
+
+
+
+       <br><br>
+
+
+
+       <div class="row">
+
+         <div ng-repeat="book in recent" class=" col m4 s6">
+
+
+<div class="card small">
+
+           <div class="card-content card-modify">
+                 <span class="card-title">{{book.title}}</span>
+
+                <table>
+
+                    <tr>
+                          <td><b>Publisher</b></td>
+                          <td>{{book.publisher}}</td>
+                    </tr>
+                    <tr>
+                          <td><b>Author<span ng-show="book.authors.length > 1">s</span></b></td>
+                          <td>
+
+                              <span ng-repeat="author in book.authors">{{author}}<br></span>
+
+
+
+
+                          </td>
+                    </tr>
+
+                    <tr>
+                          <td><b>ISBN</b></td>
+                          <td>{{book.isbn13}}</td>
+                    </tr>  <tr>
+                            <td><b>Published</b></td>
+                            <td>{{fromNow(book.publishedDate)}}</td>
+                      </tr>
+
+
+                </table>
+
+</div>
+
+               </div>
+
+           </div>
+
+
+       </div>
+
+
+</div>

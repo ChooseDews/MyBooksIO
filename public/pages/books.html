@@ -1,0 +1,35 @@
+<br>
+<br>
+
+<div class="container">
+
+
+
+
+
+  <table>
+    <thead>
+      <tr>
+        <th data-field="id">Title</th>
+        <th data-field="name">Publisher</th>
+        <th data-field="price">Authors</th>
+        <th data-field="price">Date</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr ng-repeat="book in books">
+        <td>{{book.title}}</td>
+        <td>{{book.publisher}}</td>
+        <td>{{authors(book.authors)}}</td>
+        <td>{{fromNow(book.publishedDate)}}</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+
+
+
+
+</div>
