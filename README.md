@@ -1,4 +1,4 @@
-# MyBooksIO
+# MyBooks.io
 Simple ISBN Book lookup and store application
 
 
